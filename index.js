@@ -10,8 +10,8 @@ mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASS
 
 app.use(express.json());
 
-app.use('/character', require('./routes/characterRouter'))
-app.use('/characters', require('./routes/userBasedRouter'))
+app.use('character', require('./routes/characterRouter'))
+app.use('characters', require('./routes/userBasedRouter'))
 
 app.listen(process.env.PORT, () => {
     console.log(`The server is running on ${process.env.PORT}`)
